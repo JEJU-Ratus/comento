@@ -1,0 +1,73 @@
+/* main 영역의 구분선 */
+.main{
+  border-bottom: 2px solid rgb(240,193,62);
+}
+/* 자기소개 섹션 */
+.intro{
+  margin-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: black;
+}
+/* 자기소개 이미지 */
+.intro__img{
+  margin-left: 55px;
+  border-radius: 50%;
+  border: 2px solid rgb(240,193,62);
+  width: 300px;
+  height: 300px;
+}
+/* 자기소개 상세 분류(이름, 전공, 사용가능언어, 보유 자격증) */
+.category{
+  margin-left: 95px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 800px;
+  line-height: 72px;
+}
+/* 상세 분류 중 '이름' */
+.category__name{
+  margin-right: 300px;
+}
+/* 상세 분류 중 '전공' */
+.category__major{
+  margin-right: 200px;
+}
+/* 상세 분류 중 '사용가능 언어' */
+.category__programing-lang{
+  margin-right: 91px;
+}
+/* 분류의 제목 디자인 */
+.category__title, 
+.history__title, 
+.say-something__title{
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(55, 125, 255);
+}
+/* 연혁, 한마디 제목 부분 margin */
+.history__title, 
+.say-something__title{
+  margin: 30px 0;
+}
+/* 분류의 내용 디자인 */
+.category__content{
+  margin-left: 15px;
+  font-size: 24px;
+}
+.history__content, 
+.say-something__content{
+  margin-left: 15px;
+  font-size: 18px;
+}
+/* 자기소개 연혁,한마디 글 간격 */
+.intro__history,
+.intro__say-something{
+  line-height: 34px;
+}
+/* 연혁 block의 세로 넓이를 늘림. 한마디를 아래로 wrap하기 위해 */
+.intro__history{
+  flex-basis: 550px;
+}

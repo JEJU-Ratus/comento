@@ -1,0 +1,10 @@
+.header{
+  border-bottom: 2px solid rgb(240,193,62);
+}
+/* header의 h1 태그 */
+.header__title{
+  padding: 40px 0;
+  text-align: center;
+  color: rgb(240,193,62);
+  font-size: 32px;
+}
