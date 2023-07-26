@@ -1,0 +1,18 @@
+/* 자주 사용하는 CSS 코드를 모아놓는 곳 */
+
+/* 가리기 */
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* 자판기 전체의 테두리 */
+.container{
+  border: 1px solid black;
+  width: fit-content;
+  position: relative;
+}

@@ -1,0 +1,5 @@
+/* 상위 relative는 container */
+.header{
+  position: absolute;
+  right: 50%;
+}
