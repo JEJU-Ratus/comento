@@ -25,6 +25,7 @@
 /* 투입 금액 영역 */
 .money{
     border-radius: 17%;
+    margin-left: 32px;
     padding: 10px;
     background-color: #7f4a0e;
     box-shadow: 5px 5px 5px brown;
@@ -32,5 +33,21 @@
 /* 투입 금액 글자 */
 .money__title{
     font-size: 40px;
+    color: rgb(252, 216, 150);
+}
+.money__input{
+    display: inline-block;
+    width: 140px;
+    margin: 20px 5px 10px 0px;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: #7a2c08;
+    text-align: right;
+    font-size: 28px;
+    color: orange;
+}
+.won{
+    font-size: 28px;
+    font-weight: bold;
     color: rgb(252, 216, 150);
 }
