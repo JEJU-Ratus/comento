@@ -12,9 +12,22 @@
 
 /* 자판기 전체의 레이아웃 */
 .container{
-  border: 1px solid red;
+  margin: 15% auto;
+  border: 10px solid rgb(255, 153, 0);
   border-radius: 2%;
   width: 800px;
-  background-color: red;
+  background-color: #d71d1d;
   position: relative;
+}
+/* 음료 선택 버튼 */
+.drink-choose__btn{
+  padding: 5px;
+  border: 2.5px solid black;
+  border-radius: 10%;
+  width: 100px;
+  background-color: white;
+}
+/* 음료 선택 버튼에 마우스 올라갔을 때 포인터 변경 */
+.drink-choose__btn:hover{
+  cursor: pointer;
 }
