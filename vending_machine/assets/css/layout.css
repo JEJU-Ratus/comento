@@ -7,3 +7,12 @@
   right: 41%;
   top: -5%;
 }
+/* footer의 저작권 section */
+.info__copyright{
+  font-weight: bold;
+  text-align: center;
+}
+/* 저작권 section의 font-size */
+.info__font-size{
+  font-size: 12px;
+}
