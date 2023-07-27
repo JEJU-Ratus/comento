@@ -9,6 +9,12 @@
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
+/* float를 claer하는 코드로, float를 가지고 있는 content의 부모 div를 만들어 해당 className을 추가 */
+.float-clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 
 /* 자판기 전체의 레이아웃 */
 .container{
