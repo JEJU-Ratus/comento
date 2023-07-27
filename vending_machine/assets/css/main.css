@@ -60,11 +60,12 @@
 }
 /* 현금 및 지폐 투입구 그림 */
 .input__img{
-    margin-top: 24px;
+    margin-top: 110px;
     width: 194px;
 }
 /* 잔돈 반환구 */
 .money__output{
+    margin: 58px 9px 0 0;
     width: 50px;
     height: 50px;
     border: 3px solid black;
