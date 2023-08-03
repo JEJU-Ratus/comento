@@ -1,11 +1,15 @@
 /* 화면 배경 레이아웃 */
 .container{
+  display: flex;
+  justify-content: center;
   background: linear-gradient(#E8B4FF,#B4EAF6);
   width: 100vw;
   height: 100vh;
 }
 /* 시계의 레이아웃 */
 .clock{
-  width: 30%;
+  margin-top: 15%;
+  width: 40%;
+  height: fit-content;
   border: 2px solid black;
 }
