@@ -1,0 +1,11 @@
+/* 화면 배경 레이아웃 */
+.container{
+  background: linear-gradient(#E8B4FF,#B4EAF6);
+  width: 100vw;
+  height: 100vh;
+}
+/* 시계의 레이아웃 */
+.clock{
+  width: 30%;
+  border: 2px solid black;
+}

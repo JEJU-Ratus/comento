@@ -1,0 +1,17 @@
+/* 자주 사용하는 CSS 코드를 모아놓는 곳 */
+
+/* 가리기 */
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+/* float를 claer하는 코드로, float를 가지고 있는 content의 부모 div를 만들어 해당 className을 추가 */
+.fclear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
