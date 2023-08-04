@@ -5,28 +5,64 @@
 /* 시계의 위치 레이아웃 */
 .clock{
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
 }
 /* 시계의 레이아웃 */
 .clock__screen{
     margin-top: 15%;
-    width: 40%;
+    flex-basis: 40%;
     height: fit-content;
     border: 2px solid black;
 }
+/* 시계 배터리 레이아웃 */
+.clock__battery{
+  text-align: right;
+}
+/* 시계 시간 표시 부분 레이아웃 */
+.clock__time{
+  text-align: center;
+}
 /* alarm 위치 레이아웃 */
 .alarm{
-    text-align: center;
+  text-align: center;
+  flex-basis: 60.1%;
+  position: relative;
 }
+/* alarm 목록 제목 */
+.alarm__tit{
+  margin-top: 10px;
+}
+/* 알람 설정 버튼 */
 .alarm__btn{
-    margin-left: 32%;
+    float: right;
+    margin-right: 16.5%;
     margin-bottom: 10px;
 }
-.line{
-    margin: 0 auto;
-    content: "";
-    display: block;
-    width: 35%;
-    border-bottom: 1px solid black;
-
+.alarm__btn:hover{
+  cursor: pointer;
+}
+/* 알람 설정 창 */
+.alarm__set{
+  display: none;
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: white;
+  padding: 10px;
+  height: 100px;
+  position: absolute;
+  top : 12px;
+  right : 110px;
+  z-index: 1;
+}
+/* 알람 생성 및 취소 버튼 */
+.alarm__set--btn{
+  margin-top: 30px;
+}
+/* 구분선 */
+.alarm__list::before{
+  content: "";
+  display: inline-block;
+  width : 35vw;
+  border-bottom: 1px solid black;
 }

@@ -31,3 +31,18 @@ for(let i = startMin; i<endMin; i++){
             setMinOption.selected = true;
         }
 }
+
+const alarmSetBtn = document.getElementById('alarm__btn'), // 알람 설정 버튼
+cancleAlarmBtn = document.getElementById('cancle__btn'), // 알람 생성 취소 버튼
+createAlarmBtn = document.getElementById('create__btn'), // 알람 생성 버튼
+alarmSet = document.getElementById('alarm__set'); // 알람 설정 창
+
+alarmSetBtn.addEventListener('click',function(){
+  alarmSet.style.display = 'inline-block';
+})
+cancleAlarmBtn.addEventListener('click',function(){
+  alarmSet.style.display = 'none';
+})
+createAlarmBtn.addEventListener('click',function(){
+  alarmSet.style.display = 'none';
+})
