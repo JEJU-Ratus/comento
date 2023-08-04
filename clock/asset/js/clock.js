@@ -2,7 +2,7 @@
 const battery = document.getElementById('battery'), // 배터리 잔량 표기
 clock = document.getElementById('clock_screen'); // 시계 레이아웃
 
-let fullBtPercent = 5, // 배터리 총량
+let fullBtPercent = 100, // 배터리 총량
 btPercent = 0; // 배터리 잔량이 0일때
 
 battery.textContent = `${fullBtPercent}%`; // 배터리 잔량 표기부분에 퍼센트 수치 집어넣기
