@@ -65,14 +65,15 @@ createAlarmBtn.addEventListener('click',function(){
   deleteBtn.addEventListener("click", function(){
     newList.remove(); // 삭제 버튼을 클릭하면 해당 리스트 항목 삭제
   });
-  newList.appendChild(deleteBtn);
+  newList.appendChild(deleteBtn); // 자식 요소로 삭제 버튼 추가
+
   if(alarmList.children.length < maxChild){
-  alarmList.appendChild(newList);
+  alarmList.appendChild(newList); 
   }
   else{
-    alarmSet.style.display = 'inline-block'; 
-    // modalBackground.style.backgroundColor = 'rgba(0,0,0,0.4)';
-    modalError.style.display = 'block';
+    alarmSet.style.display = 'inline-block';  // 알림 설정 창 보이게
+    modalBackground.style.display = 'block'; // 모달 배경 창 on 함으로 다른거 클릭 방지
+    modalError.style.display = 'block'; // 모달 에러창 띄우기
   }
 })
 // 모달창
@@ -81,5 +82,6 @@ modalError = document.getElementById('modal__error'), // 모달 창
 modalBackground = document.getElementById('modal__background'); // 모달 창 배경
 
 modalClose.addEventListener('click',function(){
-    modalError.style.display = 'none';
+    modalBackground.style.display = 'none'; // 모달 배경 창 off
+    modalError.style.display = 'none'; // 모달 에러 창 off
 })
