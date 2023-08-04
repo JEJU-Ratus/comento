@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시계</title>
-    <link rel="stylesheet" href="asset/css/main.css">
-  </head>
 
-  <body>
-    <div class="container">
-      <header>
-        <h1 class="blind">알람 시계</h1>
-      </header>
-      <main>
-        <div class="clock">
-          <section class="clock__screen" id="clock_screen">
-            <h2 class="blind">알람시계 화면</h2>
-            <section class="clock__battery">
-              <h2 class="blind">배터리잔량</h2>
-              <p id="battery"></p>
-            </section>
-            <section class="clock__time">
-              <h2 class="blind">현재 시간</h2>
-              <p id="time"></p>
-            </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시계</title>
+  <link rel="stylesheet" href="asset/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="blind">알람 시계</h1>
+    </header>
+    <main>
+      <div class="clock">
+        <section class="clock__screen" id="clock_screen">
+          <h2 class="blind">알람시계 화면</h2>
+          <section class="clock__battery">
+            <h2 class="blind">배터리잔량</h2>
+            <p id="battery"></p>
           </section>
+          <section class="clock__time">
+            <h2 class="blind">현재 시간</h2>
+            <p id="time"></p>
+          </section>
+        </section>
 
-          <section class="alarm">
-            <h2 class="alarm__tit">알람 목록</h2>
-            <div class="fclear">
-              <button type="button" class="alarm__btn" id="alarm__btn">알람 설정</button>
+        <section class="alarm">
+          <h2 class="alarm__tit">알람 목록</h2>
+          <div class="fclear">
+            <button type="button" class="alarm__btn" id="alarm__btn">알람 설정</button>
+          </div>
+          <section class="alarm__set" id="alarm__set">
+            <select name="set__division" id="set__division">
+              <option value="오전" selected>오전</option>
+              <option value="오후">오후</option>
+            </select>
+            <select name="set__hours" id="set__hours"></select>
+            <select name="set__minutes" id="set__minutes"></select>
+            <div class="alarm__set--btn">
+              <button type="button" id="cancle__btn">취소</button>
+              <button type="button" id="create__btn">알람 생성</button>
             </div>
-            <section class="alarm__set" id="alarm__set">
-              <select name="set__division" id="set__division">
-                <option value="오전" selected>오전</option>
-                <option value="오후">오후</option>
-              </select>
-              <select name="set__hours" id="set__hours"></select>
-              <select name="set__minutes" id="set__minutes"></select>
-              <div class="alarm__set--btn">
-                <button type="button" id="cancle__btn">취소</button>
-                <button type="button" id="create__btn">알람 생성</button>  
-              </div>
-            </section>
-            <section class="alarm__list" id="alarm__list"></section>
           </section>
-        </div>
-      </main>
-      <footer></footer>
-      <script src="asset/js/clock.js"></script>
-      <script src="asset/js/alarm.js"></script>
-    </div>
-  </body>
+          <div id="modal__background">
+            <div class="modal__error" id="modal__error">
+              <p class="error__msg">더 이상 알람을 추가할 수 없습니다.</p>
+              <button type="button" class="modal__close" id="modal__close">닫기</button>
+            </div>
+            <section class="alarm__list" id="alarm__list"></section>
+          </div>
+        </section>
+  </div>
+  </main>
+  <footer></footer>
+  <script src="asset/js/clock.js"></script>
+  <script src="asset/js/alarm.js"></script>
+  </div>
+</body>
+
 </html>

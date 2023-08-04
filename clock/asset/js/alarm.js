@@ -37,7 +37,8 @@ const alarmSetBtn = document.getElementById('alarm__btn'), // 알람 설정 버�
 cancleAlarmBtn = document.getElementById('cancle__btn'), // 알람 생성 취소 버튼
 createAlarmBtn = document.getElementById('create__btn'), // 알람 생성 버튼
 alarmSet = document.getElementById('alarm__set'), // 알람 설정 창
-alarmList = document.getElementById('alarm__list'); // 알람 설정 리스트
+alarmList = document.getElementById('alarm__list'), // 알람 설정 리스트
+maxChild = 3;
 
 // 알람 설정 버튼을 눌렀을 때 알람 설정 창이 보이게
 alarmSetBtn.addEventListener('click',function(){
@@ -55,7 +56,7 @@ createAlarmBtn.addEventListener('click',function(){
   hoursOption = setHours.options[setHours.selectedIndex].value, // 시
   minutesOption = setMinutes.options[setMinutes.selectedIndex].value; // 분
 
-  alarmSet.style.display = 'none';
+  alarmSet.style.display = 'none'; // 알람 설정 창 숨기기
   let newList = document.createElement('li');
   newList.textContent = `${divisionOption} ${hoursOption}시 ${minutesOption}분`;
   // 리스트에 넣을 각 항목 삭제버튼
@@ -65,5 +66,20 @@ createAlarmBtn.addEventListener('click',function(){
     newList.remove(); // 삭제 버튼을 클릭하면 해당 리스트 항목 삭제
   });
   newList.appendChild(deleteBtn);
+  if(alarmList.children.length < maxChild){
   alarmList.appendChild(newList);
+  }
+  else{
+    alarmSet.style.display = 'inline-block'; 
+    // modalBackground.style.backgroundColor = 'rgba(0,0,0,0.4)';
+    modalError.style.display = 'block';
+  }
+})
+// 모달창
+const modalClose = document.getElementById('modal__close'), // 모달 창 닫기 버튼
+modalError = document.getElementById('modal__error'), // 모달 창
+modalBackground = document.getElementById('modal__background'); // 모달 창 배경
+
+modalClose.addEventListener('click',function(){
+    modalError.style.display = 'none';
 })

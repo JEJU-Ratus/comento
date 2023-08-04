@@ -59,6 +59,33 @@
 .alarm__set--btn{
   margin-top: 30px;
 }
+/* modal 창 background */
+.modal__background{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+/* modal 창 */
+.modal__error{
+  display: none;
+  padding: 10px;
+  width: 280px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+/* modal 창 에러메시지 */
+.error__msg{
+  margin-bottom: 20px;
+}
+/* modal 창 닫기 버튼 */
+.modal__close{
+  margin: 0 auto;
+}
 /* 구분선 */
 .alarm__list::before{
   content: "";
