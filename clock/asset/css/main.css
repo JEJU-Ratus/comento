@@ -1,3 +1,32 @@
 @import './reset.css';
 @import './common.css';
 @import './layout.css';
+
+/* 시계의 위치 레이아웃 */
+.clock{
+    display: flex;
+    justify-content: center;
+}
+/* 시계의 레이아웃 */
+.clock__screen{
+    margin-top: 15%;
+    width: 40%;
+    height: fit-content;
+    border: 2px solid black;
+}
+/* alarm 위치 레이아웃 */
+.alarm{
+    text-align: center;
+}
+.alarm__btn{
+    margin-left: 32%;
+    margin-bottom: 10px;
+}
+.line{
+    margin: 0 auto;
+    content: "";
+    display: block;
+    width: 35%;
+    border-bottom: 1px solid black;
+
+}

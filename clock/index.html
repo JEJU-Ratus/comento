@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>시계</title>
   <link rel="stylesheet" href="asset/css/main.css">
 </head>
+
 <body>
   <div class="container">
-    <div class="clock" id="clock">
     <header>
       <h1 class="blind">알람 시계</h1>
     </header>
     <main>
-      <section class="battery">
-        <h2 class="blind">배터리잔량</h2>
-        <p id="battery"></p>  
-      </section>
-      <section class="time">
-        <h2 class="blind">현재 시간</h2>
-        <p id="time"></p>  
+      <div class="clock">
+        <section class="clock__screen" id="clock_screen">
+          <h2 class="blind">알람시계 화면</h2>
+          <section class="clock__battery">
+            <h2 class="blind">배터리잔량</h2>
+            <p id="battery"></p>
+          </section>
+          <section class="clock__time">
+            <h2 class="blind">현재 시간</h2>
+            <p id="time"></p>
+          </section>
+        </section>
+      </div>
+      <section class="alarm">
+        <h2>알람 목록</h2>
+        <button type="button" class="alarm__btn">알람설정</button>
+        <section class="alarm__set">
+          <select name="set__division" id="set__division">
+            <option value="오전" selected>오전</option>
+            <option value="오후">오후</option>
+          </select>
+          <select name="set__hours" id="set__hours">
+          </select>
+          <select name="set__minutes" id="set__minutes">
+          </select>
+        </section>
+        <div class="line"></div> 
+        <section id="alarm__list"></section>
       </section>
     </main>
     <footer></footer>
-    </div>
+    <script src="asset/js/clock.js"></script>
+    <script src="asset/js/alarm.js"></script>
   </div>
-  <script src="asset/js/clock.js"></script>
 </body>
+
 </html>
