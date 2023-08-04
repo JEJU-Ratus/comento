@@ -3,13 +3,13 @@ setHours = document.getElementById('set__hours'); // hour select의 공간
 
 let startHour = 1; // 시작 시
 let endHour = 12; // 마지막 시
-
+let tenOClock = 10;
 
 // 반복문을 이용해서 1시~ 12시까지 추가하고, 12시에는 seleted 속성을 추가
 for(let i = startHour; i<=endHour; i++){
     let setHoursOption = document.createElement('option'); 
-    setHoursOption.value = `${i}`;
-    setHoursOption.textContent = `${i}`;
+    setHoursOption.value = `${i < tenOClock? '0'+i : i}`;
+    setHoursOption.textContent = `${i < tenOClock? '0'+i : i}`;
     setHours.appendChild(setHoursOption);
     if(i === endHour){
         setHoursOption.selected = true;

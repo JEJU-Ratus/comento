@@ -2,13 +2,13 @@
 const battery = document.getElementById('battery'), // 배터리 잔량 표기
 clock = document.getElementById('clock'); // 시계 레이아웃
 
-let fullBtPercent = 5, // 배터리 총량
+let fullBtPercent = 100, // 배터리 총량
 btPercent = 0; // 배터리 잔량이 0일때
 
 battery.textContent = `${fullBtPercent}%`; // 배터리 잔량 표기부분에 퍼센트 수치 집어넣기
 
 // 1초마다 배터리 잔량 감소하는 함수
-// let btInterval = setInterval(batteryPercent,1000);
+let btInterval = setInterval(batteryPercent,1000);
 
 function batteryPercent(){
     if(fullBtPercent > btPercent){
@@ -27,7 +27,7 @@ function batteryPercent(){
 const time = document.getElementById('time'); // 시계 노출 위치
 getTime(); // 처음 웹 페이지를 켰을 때 현재 시간을 불러온다.
 
-// let timeInterval = setInterval(getTime,1000); // 초마다 현재 시간을 불러옴 
+let timeInterval = setInterval(getTime,1000); // 초마다 현재 시간을 불러옴 
 
 function getTime(){
     let todayDate = new Date(), // 현재시간을 불러옴
