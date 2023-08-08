@@ -12,7 +12,7 @@ for(let i = startHour; i<=endHour; i++){
     setHoursOption.textContent = `${i < tenOClock? '0'+i : i}`;
     setHours.appendChild(setHoursOption);
     if(i === endHour){
-        setHoursOption.selected = true;
+      setHoursOption.setAttribute("selected", "");
     }
 }
 
